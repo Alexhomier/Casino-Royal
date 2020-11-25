@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Casino Royal | Hall</title>
+	<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/rules.css">
+	<script src="js/rules.js"></script>
+</head>
+<body id="body">
+	<audio autoplay id="volume">
+		<source src="Audio/Background-music.mp3" type="audio/mpeg">
+	</audio>
+	<div type="button" class="mute" onclick="mute()" id="button-mute">Couper le son</div>
+	<img src="SpriteSheet/businessman-doing-different-actions/main-en-lair.png" alt="Casinoman" class="casinoman" id="casinoman">
+	<div class="announce" id="announce">
+		<h1>Casino Royal!</h1>
+	</div>
+	<div class="bubble-container" id="bubble-container">
+		<div class="bubble-item-title">
+			<h3 id="bubble-title">Bienvenue au Casino Royal!</h3>
+		</div>
+		<div class="bubble-item-text">
+			<p id="bubble-text">Bienvenue dans mon casino! Je suis Donaldo J. trumpet, êtes-vous prêt à jouer au Blackjack? Vous pouvez appuyer sur "Continuer" pour lire les règles du jeu ou sur "Jouer" pour jouer maintenant.</p>
+		</div>
+		<div class="bubble-container-button" id="bubble-button">
+			<div type="button" class="bubble-item-button-play" id="play" onclick="jouer()">Jouer</div>
+			<div type="button" class="bubble-item-button-continue" id="continue" onclick="buttonContinue()">Continuer</div>
+		</div>
+	</div>
+	<div class="money-container" id="money-container">
+		<div class="money-item-case">
+			<h2 class="money-count" id="money-count">0$</h2>
+		</div>
+	</div>
+	<img src="./img/black.png" alt="black" id="image-opacity" class="image-opacity">
+</body>
+</html>

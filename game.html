@@ -1,0 +1,93 @@
+<!--USE GOOGLE CHROME AND IE FOR BETTER RESULTS. RESOLUTION 1280x720 IS THE BEST-->
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Blackjack | Play</title>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/game.css">
+      <link rel="icon" href="img/Flavicon.ico" type="image/x-icon">
+      <script src="js/game.js"></script>
+      <script src="Sprite/GameChip.js"></script>
+      <script src="Sprite/GameCard.js"></script>
+   </head>
+   <body id="body">
+      <audio id="audio">
+         <source src="Audio/ns-bounce.mp3" type="audio/mpeg" id="audio-source">
+      </audio>
+      <audio id="card-audio">
+         <source src="Audio/OneCard.mp3" id="card-audio-source" type="audio/mpeg">
+      </audio>
+      <div class="audio">
+         <div type="button" class="audio-down" onclick="audioDown()">-</div>
+         <div type="button" class="audio-play" onclick="playPause()" id="button-mute">Activer la musique</div>
+         <div type="button" class="audio-up" onclick="audioUp()">+</div>
+      </div>
+      <div class="money-container" id="money-container">
+         <div class="money-item-case">
+            <h2 id="money-count">0$</h2>
+         </div>
+      </div>
+      <div class="table-text-center-container">
+         <div class="table-text-above-center-blackjack">
+            <h3>
+            BlackJack paie 3 pour 2</h2>
+         </div>
+         <div class="table-text-above-center-stand">
+            <h3>Le croupier tire sur 16 et reste sur 17</h3>
+         </div>
+         <div class="table-text-center">
+            <h3>Assurance paie 2 pour 1</h3>
+            <div class="insurance-bet" id="insurance-bet">
+               <p class="insurance-bet-value" id="insurance-bet-value"></p>
+            </div>
+         </div>
+      </div>
+      <div class="table-button-container" id="table-button-container">
+         <button type="button" class="table-button-hit" onclick="hitPlayer()">Tirer</button>
+         <button type="button" class="table-button-stand" onclick="stand()">Rester</button>
+         <button type="button" class="table-button-double" onclick="double()">Doubler</button>
+      </div>
+      <div class="table-bet-container" id="table-bet-container">
+         <button type="button" class="table-bet-1" id="table-bet-1" onclick="bet(this)">1$</button>
+         <button type="button" class="table-bet-5" id="table-bet-5" onclick="bet(this)">5$</button>
+         <button type="button" class="table-bet-100" id="table-bet-100" onclick="bet(this)">100$</button>
+         <button type="button" class="table-bet-500" id="table-bet-500" onclick="bet(this)">500$</button>
+         <button type="button" class="table-bet-done" id="table-bet-done" onclick="betDone()">Miser</button>
+         <button type="button" class="table-bet-reset" id="table-bet-reset" onclick="betReset()">Effacer</button>
+      </div>
+      <div class="money-bet-container">
+         <div class="money-item-bet">
+            <h2 id="money-bet">0$</h2>
+         </div>
+      </div>
+      <div class="count-card-dealer-container" id="count-card-dealer-container">
+         <h4 id="count-card-dealer">0</h4>
+      </div>
+      <div class="count-card-player-container" id="count-card-player-container">
+         <h4 id="count-card-player">0</h4>
+      </div>
+      <div class="bet-container" id="bet-container"></div>
+      <img src="SpriteSheet/PlayingCard/cartes/tile.png" alt="card" class="table-card-deck" id="deck">
+      <div class="insurance-container" id="insurance">
+         <h5 class="insurance-title" id="insurance-title">Assurance?</h5>
+         <div class="insurance-choice-container">
+            <button class="insurance-yes" id="insurance-yes" onclick="insuranceYes()">Oui</button>
+            <button class="insurance-non" onclick="insuranceNo()">Non</button>
+         </div>
+      </div>
+      <img src="img/black.png" alt="background" class="endgame-img" id="endgame-img">
+      <div class="endgame-announce-container" id="endgame-announce-container">
+         <h1 id="endgame-announce-title"></h1>
+         <button type="button" class="endgame-button-continue" onclick="newGame()">Continuer</button>
+      </div>
+      <!--
+         _
+           .__(.)< (MEOW)
+            \___)
+         ~~~~~~~~~~~~~~~~~~-->
+   </body>
+</html>

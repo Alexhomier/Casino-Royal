@@ -1,0 +1,627 @@
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-image: url('../img/blackjack_background.jpg');
+	background-size: cover;
+	overflow: hidden;
+}
+
+/* audio button */
+.audio {
+	margin-top: 8px;
+	width: 300px;
+}
+
+.audio:hover {
+	margin-top: -2px;
+}
+
+.audio-play {
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 15px;
+	color: rgb(209, 188, 3);
+	font-weight: bold;
+	background-color: #2c2c2c;
+	border: outset 3px #D90302;
+}
+
+.audio-play:hover {
+	padding: 7px 17px;
+	background-color: #4e4e4e;
+	margin-right: -2px;
+	margin-left: -2px;
+}
+
+.audio-up {
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 15px;
+	margin-left: -4px;
+	color: rgb(209, 188, 3);
+	font-weight: bold;
+	background-color: #2c2c2c;
+	border: outset 3px #D90302;
+}
+
+.audio-up:hover {
+	padding: 7px 17px;
+	background-color: #4e4e4e;
+	margin-left: -2px;
+}
+
+.audio-down {
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 15px;
+	margin-right: -4px;
+	color: rgb(209, 188, 3);
+	font-weight: bold;
+	background-color: #2c2c2c;
+	border: outset 3px #D90302;
+}
+
+.audio-down:hover {
+	padding: 7px 17px;
+	background-color: #4e4e4e;
+	margin-left: -2px;
+	margin-right: -6px;
+}
+
+.money-container {
+	display: flex;
+	height: 40px;
+	width: 120px;
+	position: absolute;
+	top: 0%;
+	margin-top: 15px;
+	left: 90%;
+	margin-left: -5px;
+}
+
+.money-item-case {
+	display: flex;
+	height: 35px;
+	width: 100%;
+	background-color: #2c2c2c;
+	border: #D90302 outset 3px;
+	cursor: default;
+}
+
+.money-bet-container {
+	display: flex;
+	height: 40px;
+	width: 120px;
+	position: absolute;
+	top: 60%;
+	left: 12%;
+	margin-left: 5px;
+}
+
+.money-item-bet {
+	display: flex;
+	height: 35px;
+	width: 100%;
+	background-color: #2c2c2c;
+	border: #D90302 outset 3px;
+	cursor: default;
+}
+
+h2 {
+	height: 40px;
+	width: 120px;
+	margin-top: 4px;
+	font-size: 26px;
+	color: rgb(209, 188, 3);
+	font-family: monospace;
+	text-align: right;
+}
+
+.count-card-dealer-container {
+	width: 50px;
+	height: 40px;
+	position: absolute;
+	top: 3%;
+	left: 40%;
+	background-color: #2c2c2c;
+	border: #D90302 outset 3px;
+	border-radius: 30%;
+	visibility: hidden;
+}
+
+.count-card-player-container {
+	width: 50px;
+	height: 40px;
+	position: absolute;
+	top: 65%;
+	left: 40%;
+	background-color: #2c2c2c;
+	border: #D90302 outset 3px;
+	border-radius: 30%;
+	visibility: hidden;
+}
+
+h4 {
+	height: 40px;
+	width: 40px;
+	margin-top: 4px;
+	font-size: 26px;
+	color: rgb(209, 188, 3);
+	font-family: monospace;
+	text-align: right;
+}
+
+.table-text-center-container {
+	height: 200px;
+	width: 500px;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -140px;
+	margin-left: -250px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	opacity: 0.6;
+}
+
+.table-text-above-center-blackjack {
+	flex: 0 1 auto;
+	color: rgb(209, 188, 3);
+}
+
+.table-text-above-center-stand {
+	flex: 0 1 auto;
+	margin-top: -15px;
+	color: white;
+}
+
+.table-text-center {
+	flex: 0 1 auto;
+	color: rgb(209, 188, 3);
+	margin-top: 40px;
+	font-size: 25px;
+	border-top: solid 5px rgb(209, 188, 3);
+	border-bottom: solid 5px rgb(209, 188, 3);
+	font-family: 'Titillium Web', sans-serif;
+}
+
+/* Options button */
+
+.table-button-container {
+	height: 100px;
+	width: 300px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 85%;
+	margin-top: 0px;
+	margin-left: -155px;
+	visibility: hidden;
+}
+
+.table-button-hit {
+	width: 80px;
+	height: 60px;
+	background-color: rgb(0, 196, 0);
+	border: green solid 5px;
+	border-radius: 200px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-button-hit:hover {
+	background-color: rgb(119, 190, 119);
+}
+
+.table-button-hit:focus {
+	outline: none;
+}
+
+.table-button-stand {
+	width: 80px;
+	height: 60px;
+	background-color: #D90302;
+	border: rgb(122, 0, 0) solid 5px;
+	border-radius: 200px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-button-stand:hover {
+	background-color: rgb(216, 106, 106);
+}
+
+.table-button-stand:focus {
+	outline: none;
+}
+
+.table-button-double {
+	width: 90px;
+	height: 60px;
+	background-color: rgb(2, 138, 217);
+	border: rgb(0, 73, 122) solid 5px;
+	border-radius: 200px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-button-double:hover {
+	background-color: rgb(106, 172, 216);
+}
+
+.table-button-double:focus {
+	outline: none;
+}
+
+/* bet */
+
+.table-bet-container {
+	height: 450px;
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	left: 5%;
+	bottom: 5%;
+	margin-bottom: -25px;
+	margin-left: -85px;
+}
+
+.table-bet-1 {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(0, 196, 0);
+	border: green dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-bet-1:hover {
+	background-color: rgb(119, 190, 119);
+}
+
+.table-bet-1:focus {
+	outline: none;
+}
+
+.table-betted-1 {
+	width: 50px;
+	height: 50px;
+	background-color: rgb(0, 196, 0);
+	border: green dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.table-bet-5 {
+	width: 50px;
+	height: 50px;
+	background-color: #D90302;
+	border: rgb(122, 0, 0) dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-bet-5:hover {
+	background-color: rgb(216, 106, 106);
+}
+
+.table-bet-5:focus {
+	outline: none;
+}
+
+.table-betted-5 {
+	width: 50px;
+	height: 50px;
+	background-color: #D90302;
+	border: rgb(122, 0, 0) dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.table-bet-100 {
+	width: 70px;
+	height: 70px;
+	background-color: rgb(161, 4, 209);
+	border: rgb(87, 0, 95) dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-bet-100:hover {
+	background-color: rgb(176, 89, 202);
+}
+
+.table-bet-100:focus {
+	outline: none;
+}
+
+.table-betted-100 {
+	width: 70px;
+	height: 70px;
+	background-color: rgb(161, 4, 209);
+	border: rgb(87, 0, 95) dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.table-bet-500 {
+	width: 70px;
+	height: 70px;
+	background-color: rgb(0, 155, 245);
+	border: rgb(0, 53, 122) dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-bet-500:hover {
+	background-color: rgb(104, 191, 241);
+}
+
+.table-bet-500:focus {
+	outline: none;
+}
+
+.table-betted-500 {
+	width: 70px;
+	height: 70px;
+	background-color: rgb(0, 155, 245);
+	border: rgb(0, 53, 122) dotted 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.table-bet-done {
+	width: 80px;
+	height: 80px;
+	background-color: rgb(57, 245, 0);
+	border: rgb(0, 122, 0) solid 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-bet-done:hover {
+	background-color: rgb(150, 241, 166);
+	border: rgb(0, 0, 0) solid 5px;
+}
+
+.table-bet-done:focus {
+	outline: none;
+}
+
+.table-bet-reset {
+	width: 80px;
+	height: 80px;
+	background-color: rgb(212, 7, 7);
+	border: rgb(110, 1, 1) solid 5px;
+	border-radius: 50%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.table-bet-reset:hover {
+	background-color: rgb(241, 104, 104);
+	border: rgb(0, 0, 0) solid 5px;
+}
+
+.table-bet-reset:focus {
+	outline: none;
+}
+
+.bet-container {
+	width: 200px;
+	height: 150px;
+	position: absolute;
+	top: 70%;
+	left: 9%;
+	margin-left: 5px;
+}
+
+
+/* Card */
+
+.table-card-deck {
+	position: absolute;
+	height: 106px;
+	width: 76px;
+	top: 100px;
+	left: 1500px;
+}
+
+
+/* Insurance */
+
+.insurance-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 75px;
+	background-color: #2c2c2c;
+	border: #D90302 outset 3px;
+	margin-left: -110px;
+	margin-top: -20px;
+	visibility: hidden;
+}
+
+.insurance-title {
+	width: 200px;
+	height: 30px;
+	font-size: 26px;
+	color: rgb(209, 188, 3);
+	font-family: monospace;
+	text-align: center;
+	margin: 0px;
+	visibility: hidden;
+}
+
+.insurance-choice-container {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.insurance-yes {
+	width: 50px;
+	height: 30px;
+	background-color: #14a800;
+	color: rgb(209, 188, 3);
+	border: #505050 outset 3px;
+	cursor: pointer;
+}
+
+.assurance-yes:hover {
+	background-color: #8caf87;
+}
+
+.insurance-non {
+	width: 50px;
+	height: 30px;
+	background-color: #a80000;
+	color: rgb(209, 188, 3);
+	border: #505050 outset 3px;
+	cursor: pointer;
+}
+
+.insurance-non:hover {
+	background-color: #a74747;
+}
+
+.insurance-bet {
+	position: absolute;
+	background-color: red;
+	width: 70px;
+	height: 70px;
+	top: 50%;
+	left: 50%;
+	margin-top: 20px;
+	margin-left: -35px;
+	border: rgba(5, 5, 5, 0.623) 5px dotted;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+}
+
+.insurance-bet-value {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 17px;
+	color: rgb(0, 0, 0);
+}
+
+
+/* End of game announcement */
+
+.endgame-img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0.0;
+	visibility: hidden;
+}
+
+.endgame-announce-container {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	margin-top: -50px;
+	background-color: #2c2c2c;
+	border-top: outset 3px #D90302;
+	border-bottom: outset 3px #D90302;
+	visibility: hidden;
+}
+
+h1 {
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	color: rgb(209, 188, 3);
+	font-weight: bold;
+	font-size: 80px;
+	margin: 0px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.endgame-button-continue {
+	width: 100px;
+	height: 40px;
+	position: absolute;
+	top: 100%;
+	left: 90%;
+	margin-left: 0px;
+	margin-top: 185px;
+	background-color: #2c2c2c;
+	border: outset 3px #D90302;
+	color: rgb(209, 188, 3);
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+
+.endgame-button-continue:hover {
+	background-color: #5a5a5a;
+}
+
+/* Resolution 1920x1080 */
+@media only screen and (max-width: 1280px) {
+	.table-card-deck {
+		position: absolute;
+		height: 106px;
+		width: 76px;
+		top: 100px;
+		left: 1100px;
+	}
+}

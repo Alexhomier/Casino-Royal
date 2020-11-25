@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Casino Royal | Connexion</title>
+	<link rel="stylesheet" href="css/connect.css">
+	<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+	<script src="js/connect.js"></script>
+	<script src="sprite/ConnectChip.js"></script>
+	<script src="TiledImage/connect.js"></script>
+</head>
+<body>
+<img src="SpriteSheet/VOKR Chip Icon Set FREE Version by weirdsgn/VOKR Chip Icon Set FREE Version by weirdsgn/SPIN & FLIP/256/spin-h01-256.png" alt="Chip" class="connect-chip" id="chip">
+
+	<div class="connect-square" id="square">
+		<div class="connect-square-title">
+			<h1>Casino Royal!</h1>
+		</div>
+		<div class="connect-square-info">
+			<form action="rules.html" method="GET" onsubmit="return validate()" id="form-square">
+				<div class="connect-square-username">
+					<h3>Nom d'utilisateur :</h3>
+					<input type="text" name="username" id="username" required>
+				</div>
+				<div class="connect-square-password">
+					<h3>Mot de passe :</h3>
+					<input type="password" name="password" id="password" required>
+				</div>
+				<button type="submit" class="connect-square-button" onmouseover="Move()">Entrer</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
